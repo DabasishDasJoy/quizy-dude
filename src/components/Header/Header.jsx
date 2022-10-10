@@ -5,7 +5,7 @@ import logo from "../../assets/Images/15431396_9020.jpg";
 import profile from "../../assets/Images/IMG_0706.png";
 const Header = () => {
   return (
-    <div className="shadow-lg  backdrop-blur-[5px] fixed top-0 w-full">
+    <div className="shadow-lg  backdrop-blur-[5px] fixed top-0 z-50 w-full">
       <Navbar className="md:container mx-auto h-[100px]">
         <Navbar.Start>
           <NavLink className="flex justify-center items-center normal-case text-3xl font-bold">
