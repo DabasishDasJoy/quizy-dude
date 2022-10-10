@@ -5,8 +5,8 @@ import logo from "../../assets/Images/15431396_9020.jpg";
 import profile from "../../assets/Images/IMG_0706.png";
 const Header = () => {
   return (
-    <div className="shadow-lg">
-      <Navbar className="md:container mx-auto">
+    <div className="shadow-lg  backdrop-blur-[5px] fixed top-0 w-full">
+      <Navbar className="md:container mx-auto h-[100px]">
         <Navbar.Start>
           <NavLink className="flex justify-center items-center normal-case text-3xl font-bold">
             <img src={logo} alt="" className="w-20" />
@@ -65,7 +65,7 @@ const Header = () => {
                 />
               </svg>
             </Button>
-            <Dropdown.Menu className="w-52 menu-compact">
+            {/* <Dropdown.Menu className="w-52 menu-compact">
               <Dropdown.Item>
                 <NavLink>Home</NavLink>
               </Dropdown.Item>
@@ -75,7 +75,7 @@ const Header = () => {
               <Dropdown.Item>
                 <NavLink>Blog</NavLink>
               </Dropdown.Item>
-            </Dropdown.Menu>
+            </Dropdown.Menu> */}
           </Dropdown>
         </Navbar.End>
       </Navbar>

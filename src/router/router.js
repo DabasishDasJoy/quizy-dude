@@ -4,6 +4,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import Overview from "../components/Overview/Overview";
 import Main from "../layouts/Main/Main";
+import { homeLoader } from "../loader/homeLoader";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: homeLoader,
       },
       {
         path: "/overview",
