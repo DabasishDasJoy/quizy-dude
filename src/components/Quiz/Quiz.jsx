@@ -1,4 +1,4 @@
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Radio } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
@@ -62,7 +62,11 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
         <h4>Correct Answer: {correctAnswer}</h4>
       </div>
       <button onClick={handleShowAnswer} className="absolute top-2 right-4">
-        <FontAwesomeIcon icon={faEye} />
+        {visible ? (
+          <FontAwesomeIcon icon={faEyeSlash} />
+        ) : (
+          <FontAwesomeIcon icon={faEye} />
+        )}
       </button>
     </div>
   );
