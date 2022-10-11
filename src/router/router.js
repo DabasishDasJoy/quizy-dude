@@ -3,7 +3,8 @@ import Blog from "../components/Blog/Blog";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import Overview from "../components/Overview/Overview";
-import Quiz from "../components/Quiz/Quiz";
+import Quizes from "../components/Quizes/Quizes";
+
 import Main from "../layouts/Main/Main";
 import { homeLoader } from "../loader/homeLoader";
 import { topicQuizLoader } from "../loader/TopicQuizLoader";
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
       {
         path: "/topic/:topicId",
         loader: ({ params }) => topicQuizLoader(params.topicId),
-        element: <Quiz />,
+        element: <Quizes />,
       },
     ],
   },

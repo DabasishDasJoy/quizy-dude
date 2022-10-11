@@ -16,7 +16,6 @@ const Header = () => {
       className={`fixed top-0 z-50 w-full ${
         scroll && "backdrop-blur-[5px] bg-white/30 shadow-lg"
       }`}
-      onScroll="backdrop-blur-[5px] bg-white/30"
     >
       <Navbar className="md:container mx-auto h-[100px]">
         <Navbar.Start>
