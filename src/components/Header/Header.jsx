@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 z-50 text-[#000A38] w-full ${
+      className={`fixed top-0 z-50 w-full ${
         scroll && "backdrop-blur-[5px] bg-white/20 shadow-lg"
       }`}
     >
@@ -31,27 +31,34 @@ const Header = () => {
           <Menu horizontal className="p-0 flex gap-20 text-[24px] font-bold">
             <NavLink
               to={"/"}
-              className={`hover:text-[#FA4729] transition delay-75 ${(
+              end
+              className={({ isActive }) =>
                 isActive
-              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
+                  ? "text-[#FA4729]"
+                  : "text-[#000A38] hover:text-[#FA4729] transition delay-75"
+              }
             >
               Home
             </NavLink>
 
             <NavLink
               to={"statistics"}
-              className={`hover:text-[#FA4729] transition delay-75 ${(
+              className={({ isActive }) =>
                 isActive
-              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
+                  ? "text-[#FA4729]"
+                  : "text-[#000A38] hover:text-[#FA4729] transition delay-75"
+              }
             >
               Statistics
             </NavLink>
 
             <NavLink
               to={"blog"}
-              className={`hover:text-[#FA4729] transition delay-75 ${(
+              className={({ isActive }) =>
                 isActive
-              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
+                  ? "text-[#FA4729]"
+                  : "text-[#000A38] hover:text-[#FA4729] transition delay-75"
+              }
             >
               Blog
             </NavLink>
