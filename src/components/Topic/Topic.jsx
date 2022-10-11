@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const Topic = ({ topic: { id, name, total, logo } }) => {
   return (
-    <Card className="w-45 border border-gray-400 rounded-xl p-2">
+    <Card className="w-45 border border-gray-200 rounded-xl p-2 shadow-2xl">
       <CardHeader floated={true}>
         <img
           src={logo}

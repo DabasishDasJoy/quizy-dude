@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import titleBar from "../../assets/Images/title.png";
 import { TopicsContext } from "../../layouts/Main/Main";
+import TitleBar from "../TitleBar";
 import Topic from "../Topic/Topic";
 const Home = () => {
   const { data } = useContext(TopicsContext);
@@ -25,7 +25,7 @@ const Home = () => {
       <div className="relative bg-[url('http://iguru.wgl-demo.net/wp-content/uploads/2019/09/home_03-bg.jpg?id=2599')] bg-cover bg-no-repeat">
         <div className="relative mx-auto lg:w-[80%] md:w-[90%] w-full md:top-[-100px] top-0 md:rounded-lg bg-white p-10">
           <h1 className="text-3xl font-bold text-center">Topics</h1>
-          <img src={titleBar} alt="" className="mx-auto mt-1" />
+          <TitleBar></TitleBar>
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-10">
             {data.map((topic) => (
               <Topic key={topic.id} topic={topic}></Topic>
