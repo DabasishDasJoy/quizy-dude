@@ -1,3 +1,5 @@
+import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Radio } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
@@ -7,6 +9,7 @@ import { toast } from "react-toastify";
 
 const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
   const [value, setValue] = useState("");
+  const [visible, setVisible] = useState(false);
 
   const handleChange = (event, correctAnswer) => {
     if (correctAnswer === event.target.value) {
@@ -24,8 +27,12 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
     }
     setValue(event.target.value);
   };
+
+  const handleShowAnswer = () => {
+    setVisible(!visible);
+  };
   return (
-    <div className="rounded-lg w-[50%] mx-auto backdrop-blur-[5px] bg-white/30 shadow-lg text-[#000A38]">
+    <div className="relative rounded-lg w-[50%] mx-auto backdrop-blur-[5px] bg-white/30 shadow-lg text-[#000A38]">
       <FormControl>
         <FormLabel>
           <span className="text-[28px] font-bold">
@@ -51,6 +58,12 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
           ))}
         </RadioGroup>
       </FormControl>
+      <div className={visible ? "visible" : "hidden"}>
+        <h4>Correct Answer: {correctAnswer}</h4>
+      </div>
+      <button onClick={handleShowAnswer} className="absolute top-2 right-4">
+        <FontAwesomeIcon icon={faEye} />
+      </button>
     </div>
   );
 };
