@@ -13,17 +13,17 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 z-50 w-full ${
-        scroll && "backdrop-blur-[5px] bg-white/30 shadow-lg"
+      className={`fixed top-0 z-50 text-[#111D5E] w-full ${
+        scroll && "backdrop-blur-[5px] bg-white/20 shadow-lg"
       }`}
     >
-      <Navbar className="md:container mx-auto h-[100px]">
+      <Navbar className="md:container mx-auto h-[80px]">
         <Navbar.Start>
           <NavLink
             to={"/"}
             className="flex justify-center items-center normal-case text-3xl font-bold"
           >
-            <img src={logo} alt="" className="w-20" />
+            <img src={logo} alt="" className="w-[60px]" />
             Quiz Dude
           </NavLink>
         </Navbar.Start>

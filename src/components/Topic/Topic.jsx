@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Topic = ({ topic: { id, name, total, logo } }) => {
   return (
-    <Card className="bg-[#F6F6F6] w-[400px]">
+    <Card className="bg-[#1D2966]">
       <Card.Image src={logo} alt="Shoes" />
       <Card.Body className="items-center text-center">
         <Card.Title tag="h2">{name}</Card.Title>
