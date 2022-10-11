@@ -6,14 +6,18 @@ import FormLabel from "@mui/joy/FormLabel";
 import RadioGroup from "@mui/joy/RadioGroup";
 
 const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
-  console.log("🚀 ~ file: Quiz.jsx ~ line 9 ~ Quiz ~ options", options);
   const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = (event, correctAnswer) => {
+    if (correctAnswer === event.target.value) {
+      console.log("Correct");
+    } else {
+      console.log("False");
+    }
     setValue(event.target.value);
   };
   return (
-    <div className="h-[300px] w-[50%] mx-auto backdrop-blur-[5px] bg-white/30 shadow-lg text-[#000A38]">
+    <div className="rounded-lg w-[50%] mx-auto backdrop-blur-[5px] bg-white/30 shadow-lg text-[#000A38]">
       <FormControl>
         <FormLabel>
           <span className="text-[28px] font-bold">
@@ -24,7 +28,7 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
           defaultValue=""
           name="controlled-radio-buttons-group"
           value={value}
-          onChange={handleChange}
+          onChange={(event) => handleChange(event, correctAnswer)}
           sx={{ my: 2, mx: 5 }}
         >
           {options.map((option) => (
