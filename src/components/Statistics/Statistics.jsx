@@ -18,7 +18,7 @@ const Statistics = () => {
 
   return (
     <div className="bg-fixed bg-[url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')] bg-no-repeat bg-cover min-h-[100vh] bg-center py-[100px]">
-      <div className="w-[60%] mx-auto border border-gray-400 bg-white rounded-lg p-5">
+      <div className="lg:w-[60%] md:w-[80%] w-full mx-auto border border-gray-400 bg-white rounded-lg p-5">
         <h1 className="text-3xl font-medium text-center mb-3 text-[#000A38]">
           Statistics
         </h1>

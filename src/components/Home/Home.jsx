@@ -23,10 +23,10 @@ const Home = () => {
       </div>
 
       <div className="relative bg-[url('http://iguru.wgl-demo.net/wp-content/uploads/2019/09/home_03-bg.jpg?id=2599')] bg-cover bg-no-repeat">
-        <div className="relative mx-auto lg:w-[80%] md:w-[90%] w-full md:top-[-100px] top-0 md:rounded-lg bg-white p-10">
+        <div className="relative mx-auto lg:w-[85%] md:w-[90%] w-full md:top-[-100px] top-0 md:rounded-lg bg-white p-10">
           <h1 className="text-3xl font-bold text-center">Topics</h1>
           <TitleBar></TitleBar>
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-10 mt-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
             {data.map((topic) => (
               <Topic key={topic.id} topic={topic}></Topic>
             ))}

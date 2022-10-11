@@ -19,8 +19,8 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
           className=" bg-slate-800 rounded-xl w-full"
         />
       </CardHeader>
-      <CardBody className="grid  grid-cols-2 mt-2">
-        <div className="col-span-1">
+      <CardBody className="flex lg:flex-row md:flex-col justify-between mt-2">
+        <div className="">
           <Typography variant="h4" color="blue-gray" className="mb-2">
             {name}
           </Typography>
@@ -28,8 +28,9 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
             Total <span className="text-[#FA4729]">{total}</span> Quizes
           </Typography>
         </div>
-        <div className="col-span-1 flex justify-center items-center">
-          <button className="bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-full font-medium transition delay-75">
+
+        <div className=" flex md:justify-center justify-end items-center">
+          <button className="bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-full font-medium transition delay-75 md:mt-2">
             <Link
               to={`/topic/${id}`}
               className="flex justify-center items-center gap-1"
