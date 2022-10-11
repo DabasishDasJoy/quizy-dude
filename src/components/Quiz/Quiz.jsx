@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-
 import { Radio } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import RadioGroup from "@mui/joy/RadioGroup";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
-  console.log("🚀 ~ file: Quiz.jsx ~ line 9 ~ Quiz ~ options", options);
   const [value, setValue] = useState("");
 
   const handleChange = (event, correctAnswer) => {
@@ -31,7 +29,7 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
       <FormControl>
         <FormLabel>
           <span className="text-[28px] font-bold">
-            Quiz {idx}: {question}
+            Quiz {idx}: {question.replace(/(<([^>]+)>)/gi, "")}
           </span>
         </FormLabel>
         <RadioGroup
