@@ -1,92 +1,75 @@
 import React from "react";
+import TitleBar from "../TitleBar";
 
 const Blog = () => {
   return (
-    <div className="col-span-full p-5 flex flex-col gap-5 mt-[120px]">
-      <h1 className="font-bold text-center text-4xl">Blog</h1>
-      <hr className="w-[50%] m-auto border-[#20C997]" />
+    <div className="flex flex-col gap-5 mt-[60px] text-[#000A38] p-10">
+      <div>
+        <h1 className="font-bold text-center text-3xl mb-1">My Blog</h1>
+        <TitleBar></TitleBar>
+      </div>
 
       <article className="mt-3">
-        <h3 className="font-bold text-2xl">How Does REACT Work?</h3>
-        <p className="font-medium mt-2 pl-1">
-          While building client-side apps, a team of Facebook developers
-          realized that the DOM is slow (The Document Object Model (DOM) is an
-          application programming interface (API) for HTML and XML documents. It
-          defines the logical structure of documents and the way a document is
-          accessed and manipulated.). So, to make it faster, React implements a
-          virtual DOM that is basically a DOM tree representation in JavaScript.
-          So when it needs to read or write to the DOM, it will use the virtual
-          representation of it. Then the virtual DOM will try to find the most
-          efficient way to update the browser's DOM. Unlike browser DOM
-          elements, React elements are plain objects and are cheap to create.
-          React DOM takes care of updating the DOM to match the React elements.
-          The reason for this is that JavaScript is very fast and it's worth
-          keeping a DOM tree in it to speed up its manipulation. Although React
-          was conceived to be used in the browser, because of its design it can
-          also be used in the server with Node.js.
-        </p>
-      </article>
-      <article>
         <h3 className="font-bold text-2xl">
-          Props & State - What are the differences?
+          What are the purposes of REACT Router?
         </h3>
-        <p className="font-medium mt-2 pl-1">
-          Props are known as properties it can be used to pass data from one
-          component to another. Props cannot be modified, read-only, and
-          Immutable.The state represents parts of an Application that can
-          change. Each component can have its State. The state is Mutable and It
-          is local to the component only.
+        <p className="font-medium mt-2 pl-5">
+          React Router, and dynamic, client-side routing, allows us to build a
+          single-page web application with navigation without the page
+          refreshing as the user navigates. React Router uses component
+          structure to call components, which display the appropriate
+          information. By preventing a page refresh, and using Router or Link,
+          which is explained in more depth below, the flash of a white screen or
+          blank page is prevented. This is one increasingly common way of having
+          a more seamless user experience. React router also allows the user to
+          utilize browser functionality like the back button and the refresh
+          page while maintaining the correct view of the application.
         </p>
-        <br />
-        <span className="font-bold">Props:</span>
-        <ul className="list-disc pl-10 font-medium mt-2">
-          <li>The Data is passed from one component to another.</li>
-          <li>It is Immutable (cannot be modified)</li>
-          <li>Props can be used with state and functional components.</li>
-          <li>Props are read-only.</li>
-        </ul>
-        <br />
-        <span className="font-bold">State:</span>
-        <ul className="list-disc pl-10 font-medium mt-2">
-          <li>The Data is passed within the component only.</li>
-          <li>It is Mutable ( can be modified).</li>
-          <li>
-            State can be used only with the state components/class component
-            (Before 16.0).
-          </li>
-          <li>State is both read and write.</li>
-        </ul>
       </article>
       <article>
-        <h3 className="font-bold text-2xl">Use of useEffect in REACT-</h3>
-        <p className="font-medium mt-2 pl-1">
-          Side effects are not predictable because they are actions which are
-          performed with the "outside world." We perform a side effect when we
-          need to reach outside of our React components to do something.
-          Performing a side effect, however, will not give us a predictable
-          result. Think about if we were to request data (like blog posts) from
-          a server that has failed and instead of our post data, gives us a 500
-          status code response. Virtually all applications rely on side effects
-          to work in one way or another, aside from the simplest applications.
-          Common side effects include:
+        <h3 className="font-bold text-2xl">How does Context API work?</h3>
+        <p className="font-medium mt-2 pl-5">
+          The React Context API is a way for a React app to effectively produce
+          global variables that can be passed around. This is the alternative to
+          "prop drilling" or moving props from grandparent to child to parent,
+          and so on. Context is also touted as an easier, lighter approach to
+          state management using Redux. Context API is a (kind of) new feature
+          added in version 16.3 of React that allows one to share state across
+          the entire app (or part of it) lightly and with ease.
         </p>
-        <ul className="list-disc pl-10 font-medium mt-2">
-          <li>Making a request to an API for data from a backend server</li>
-          <li>
-            To interact with browser APIs (that is, to use document or window
-            directly)
-          </li>
-          <li>
-            Using unpredictable timing functions like setTimeout or setInterval
-          </li>
-        </ul>
-
-        <p className="font-medium mt-2 pl-1">
-          This is why useEffect exists: to provide a way to handle performing
-          these side effects in what are otherwise pure React components. In
-          short, useEffect is a tool that lets us interact with the outside
-          world but not affect the rendering or performance of the component
-          that it's in.
+        <br />
+        <p className="font-medium mt-2 pl-5">
+          React.createContext() is all you need. It returns a consumer and a
+          provider. Provider is a component that as it's names suggests provides
+          the state to its children. It will hold the "store" and be the parent
+          of all the components that might need that store. Consumer as it so
+          happens is a component that consumes and uses the state.
+        </p>
+      </article>
+      <article>
+        <h3 className="font-bold text-2xl">What is UseRef Hook?</h3>
+        <p className="font-medium mt-2 pl-5">
+          Ref means just reference, so it can be a reference to anything (DOM
+          node, Javascript value, etc). The useRef hook returns a mutable object
+          which doesn’t re-render the component when it’s changed. Think it like
+          useState, but unlike useState, doesn’t trigger re-render of the
+          component. The object that useRef returns have a current property that
+          can hold any modifiable value.
+        </p>
+        <p className="font-medium mt-2 pl-5">
+          useRef is a hook introduced with other hooks in React version 16.8 and
+          is mainly used for creating a reference of the DOM element or directly
+          accessing it inside a functional component. But don't think even for a
+          second that it's the only thing this hook is capable of as it can even
+          be used for storing mutable values across different rerenders of the
+          component. Like every other hook in React, we have to first import
+          this hook at the very top level as per the rules of hooks and then
+          only we can use it in our apps. import useRef from "react"; const
+          reference = useRef("initial value"); Copy Code Unlike other hooks like
+          useState which returns two values, the state and a function, this hook
+          returns a mutable ref object which will carry the value throughout the
+          component and if any change is made in the component, the updated
+          value will be carried forward across our React component.
         </p>
       </article>
     </div>

@@ -13,15 +13,9 @@ const Quiz = ({ question: { id, question, correctAnswer, options }, idx }) => {
 
   const handleChange = (event, correctAnswer) => {
     if (correctAnswer === event.target.value) {
-      toast.success("Correct Answer", {
-        position: "bottom-right",
-        autoClose: 2000,
-      });
+      toast.success("Correct Answer");
     } else {
-      toast.error("Wrong Answer", {
-        position: "bottom-right",
-        autoClose: 2000,
-      });
+      toast.error("Wrong Answer");
     }
     setValue(event.target.value);
   };
