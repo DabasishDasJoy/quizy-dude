@@ -37,10 +37,10 @@ const Header = () => {
             </NavLink>
 
             <NavLink
-              to={"overview"}
+              to={"statistics"}
               className="hover:text-[#F68B57] transition delay-75"
             >
-              Overview
+              Statistics
             </NavLink>
 
             <NavLink

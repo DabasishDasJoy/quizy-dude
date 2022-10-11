@@ -1,10 +1,9 @@
-import React from "react";
-import { useLoaderData } from "react-router-dom";
+import React, { useContext } from "react";
+import { TopicsContext } from "../../layouts/Main/Main";
 import Topic from "../Topic/Topic";
 
 const Home = () => {
-  const { data: topics } = useLoaderData();
-  console.log("🚀 ~ file: Home.jsx ~ line 6 ~ Home ~ topics", topics);
+  const { data } = useContext(TopicsContext);
 
   return (
     <>
@@ -17,7 +16,7 @@ const Home = () => {
       <div className="flex justify-center">
         <div className="w-[80%]  rounded-md mt-[-100px] bg-transparent grid grid-cols-3 gap-5">
           {/* <h1 className="text-3xl font-bold text-center">Topics</h1> */}
-          {topics.map((topic) => (
+          {data.map((topic) => (
             <Topic key={topic.id} topic={topic}></Topic>
           ))}
         </div>
