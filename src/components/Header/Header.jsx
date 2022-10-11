@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed top-0 z-50 text-[#111D5E] w-full ${
+      className={`fixed top-0 z-50 text-[#000A38] w-full ${
         scroll && "backdrop-blur-[5px] bg-white/20 shadow-lg"
       }`}
     >
@@ -28,27 +28,30 @@ const Header = () => {
           </NavLink>
         </Navbar.Start>
         <Navbar.Center className="hidden lg:flex">
-          <Menu
-            horizontal
-            className="p-0 flex gap-20 text-[24px] font-semibold"
-          >
+          <Menu horizontal className="p-0 flex gap-20 text-[24px] font-bold">
             <NavLink
               to={"/"}
-              className="hover:text-[#F68B57] transition delay-75"
+              className={`hover:text-[#FA4729] transition delay-75 ${(
+                isActive
+              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
             >
               Home
             </NavLink>
 
             <NavLink
               to={"statistics"}
-              className="hover:text-[#F68B57] transition delay-75"
+              className={`hover:text-[#FA4729] transition delay-75 ${(
+                isActive
+              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
             >
               Statistics
             </NavLink>
 
             <NavLink
               to={"blog"}
-              className="hover:text-[#F68B57] transition delay-75"
+              className={`hover:text-[#FA4729] transition delay-75 ${(
+                isActive
+              ) => (isActive ? "text-[#FA4729]" : undefined)}`}
             >
               Blog
             </NavLink>
@@ -63,7 +66,11 @@ const Header = () => {
             />
           </div>
           <Dropdown vertical="end">
-            <Button color="ghost" tabIndex={0} className="lg:hidden">
+            <Button
+              color="ghost"
+              tabIndex={0}
+              className="lg:hidden ml-2 text-[#000A38]"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -79,17 +86,19 @@ const Header = () => {
                 />
               </svg>
             </Button>
-            {/* <Dropdown.Menu className="w-52 menu-compact">
-              <Dropdown.Item>
-                <NavLink>Home</NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink>Statistics</NavLink>
-              </Dropdown.Item>
-              <Dropdown.Item>
-                <NavLink>Blog</NavLink>
-              </Dropdown.Item>
-            </Dropdown.Menu> */}
+            <Dropdown.Menu className="w-52 menu-compact text-center flex flex-col gap-3">
+              <NavLink to={"/"} className="border-b-2">
+                Home
+              </NavLink>
+
+              <NavLink to={"/statistics"} className="border-b-2">
+                Statistics
+              </NavLink>
+
+              <NavLink to={"/blog"} className="border-b-2">
+                Blog
+              </NavLink>
+            </Dropdown.Menu>
           </Dropdown>
         </Navbar.End>
       </Navbar>
