@@ -10,7 +10,7 @@ const Quizes = () => {
   return (
     <div
       className={
-        "bg-fixed bg-[url('https://live.staticflickr.com/65535/52413593240_e00326e727_o.png')] bg-no-repeat bg-contain min-h-[100vh] bg-center pt-[120px] flex flex-col gap-5 bg-80"
+        "bg-fixed bg-[url('http://iguru.wgl-demo.net/wp-content/uploads/2019/09/home_03-bg.jpg?id=2599')] bg-no-repeat object-cover min-h-[100vh] bg-center pt-[120px] flex flex-col gap-5 bg-80"
       }
     >
       <h1 className="text-3xl font-bold text-center">{name}</h1>

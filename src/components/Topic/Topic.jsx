@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Typography,
 } from "@material-tailwind/react";
@@ -14,7 +13,11 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
   return (
     <Card className="w-45 border border-gray-400 rounded-xl p-2">
       <CardHeader floated={true}>
-        <img src={logo} alt="topic-logo" className=" bg-slate-800 rounded-xl" />
+        <img
+          src={logo}
+          alt="topic-logo"
+          className=" bg-slate-800 rounded-xl w-full"
+        />
       </CardHeader>
       <CardBody className="grid  grid-cols-2 mt-2">
         <div className="col-span-1">
@@ -37,7 +40,6 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
           </button>
         </div>
       </CardBody>
-      <CardFooter className="flex justify-center gap-7 pt-2"></CardFooter>
     </Card>
   );
 };
