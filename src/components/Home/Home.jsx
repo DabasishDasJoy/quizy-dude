@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="text-[#111D5E]">
-      <div className="bg-no-repeat bg-cover h-[90vh] pt-[200px] flex justify-center bg-gradient-to-t  from-black to-gray-300">
+      <div className="bg-no-repeat bg-cover md:h-[90vh] h-[50vh] pt-[200px] flex justify-center bg-gradient-to-t  from-black to-gray-300">
         <img
           src="https://cdn.elearningindustry.com/wp-content/uploads/2019/01/8-types-of-interactive-quiz-formats-to-use-in-your-elearning-courses-1024x574.jpg"
           alt=""
@@ -15,7 +15,7 @@ const Home = () => {
         />
         <div className="text-white text-center">
           <h1 className="text-[52px] font-extrabold leading-[62px] tracking-[2px]">
-            Welcome To Quiz Dudu
+            Welcome To Quiz Dude
           </h1>
           <p>Here you can test yourself with bunch of quizes.</p>
         </div>
