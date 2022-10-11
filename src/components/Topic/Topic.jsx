@@ -1,3 +1,5 @@
+import { faHandPointRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Card,
   CardBody,
@@ -6,6 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topic = ({ topic: { id, name, total, logo } }) => {
   return (
@@ -13,20 +16,24 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
       <CardHeader floated={true}>
         <img src={logo} alt="topic-logo" className=" bg-slate-800 rounded-xl" />
       </CardHeader>
-      <CardBody className="grid  grid-cols-3 mt-2 px-3">
-        <div className="col-span-2">
+      <CardBody className="grid  grid-cols-2 mt-2">
+        <div className="col-span-1">
           <Typography variant="h4" color="blue-gray" className="mb-2">
             {name}
           </Typography>
           <Typography color="blue" className="font-medium" textGradient>
-            Total Quizes: {total}
+            Total <span className="text-[#FA4729]">{total}</span> Quizes
           </Typography>
         </div>
         <div className="col-span-1 flex justify-center items-center">
-          <button
-            className={`bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-full font-medium transition delay-75`}
-          >
-            Practice
+          <button className="bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-full font-medium transition delay-75">
+            <Link
+              to={`/topic/${id}`}
+              className="flex justify-center items-center gap-1"
+            >
+              <FontAwesomeIcon icon={faHandPointRight} />
+              Practice
+            </Link>
           </button>
         </div>
       </CardBody>
