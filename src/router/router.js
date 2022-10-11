@@ -6,14 +6,14 @@ import Quizes from "../components/Quizes/Quizes";
 import Statistics from "../components/Statistics/Statistics";
 
 import Main from "../layouts/Main/Main";
-import { homeLoader } from "../loader/homeLoader";
 import { topicQuizLoader } from "../loader/TopicQuizLoader";
+import { topicsLoader } from "../loader/topicsLoader";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    loader: homeLoader,
+    loader: topicsLoader,
     errorElement: <ErrorPage />,
     children: [
       {

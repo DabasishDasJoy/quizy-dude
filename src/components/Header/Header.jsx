@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Dropdown, Menu, Navbar } from "react-daisyui";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/Images/15431396_9020.jpg";
 import profile from "../../assets/Images/IMG_0706.png";
+import logo from "../../assets/Images/logo.png";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
@@ -19,7 +19,10 @@ const Header = () => {
     >
       <Navbar className="md:container mx-auto h-[100px]">
         <Navbar.Start>
-          <NavLink className="flex justify-center items-center normal-case text-3xl font-bold">
+          <NavLink
+            to={"/"}
+            className="flex justify-center items-center normal-case text-3xl font-bold"
+          >
             <img src={logo} alt="" className="w-20" />
             Quiz Dude
           </NavLink>
