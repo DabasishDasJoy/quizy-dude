@@ -4,15 +4,25 @@ import { Radio } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import RadioGroup from "@mui/joy/RadioGroup";
+import { toast } from "react-toastify";
 
 const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
+  console.log("🚀 ~ file: Quiz.jsx ~ line 9 ~ Quiz ~ options", options);
   const [value, setValue] = useState("");
 
   const handleChange = (event, correctAnswer) => {
     if (correctAnswer === event.target.value) {
       console.log("Correct");
+      toast.success("Correct Answer", {
+        position: "bottom-right",
+        autoClose: 2000,
+      });
     } else {
       console.log("False");
+      toast.error("Wrong Answer", {
+        position: "bottom-right",
+        autoClose: 2000,
+      });
     }
     setValue(event.target.value);
   };
@@ -31,8 +41,9 @@ const Quiz = ({ question: { question, correctAnswer, options }, idx }) => {
           onChange={(event) => handleChange(event, correctAnswer)}
           sx={{ my: 2, mx: 5 }}
         >
-          {options.map((option) => (
+          {options.map((option, idx) => (
             <Radio
+              key={idx}
               className="font-medium"
               size="lg"
               variant="outlined"
