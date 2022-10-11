@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Dropdown, Menu, Navbar } from "react-daisyui";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/Images/15431396_9020.jpg";
 import profile from "../../assets/Images/IMG_0706.png";
 const Header = () => {
+  const [scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 50);
+    });
+  }, []);
+
   return (
-    <div className="shadow-lg  backdrop-blur-[5px] fixed top-0 z-50 w-full">
+    <div
+      className={`fixed top-0 z-50 w-full ${
+        scroll && "backdrop-blur-[5px] bg-white/30 shadow-lg"
+      }`}
+      onScroll="backdrop-blur-[5px] bg-white/30"
+    >
       <Navbar className="md:container mx-auto h-[100px]">
         <Navbar.Start>
           <NavLink className="flex justify-center items-center normal-case text-3xl font-bold">
