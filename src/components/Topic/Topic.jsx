@@ -30,7 +30,7 @@ const Topic = ({ topic: { id, name, total, logo } }) => {
         </div>
 
         <div className=" flex md:justify-center justify-end items-center">
-          <button className="bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-full font-medium transition delay-75 md:mt-2">
+          <button className="bg-[#FA4729] hover:bg-white hover:text-[#111D5E] hover:outline outline-2 outline-[#FA4729] text-white px-5 py-2 rounded-lg font-medium transition delay-75 md:mt-2">
             <Link
               to={`/topic/${id}`}
               className="flex justify-center items-center gap-1"

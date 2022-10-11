@@ -25,7 +25,7 @@ const Quiz = ({ question: { id, question, correctAnswer, options }, idx }) => {
   };
 
   return (
-    <div className="relative rounded-lg w-[50%] mx-auto bg-white shadow-lg text-[#000A38] p-10">
+    <div className="relative rounded-lg lg:w-[50%] w-[95%] mx-auto bg-white shadow-lg text-[#000A38] p-10">
       <FormControl>
         <FormLabel>
           <span className="text-[28px] font-bold">
