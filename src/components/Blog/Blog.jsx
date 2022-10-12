@@ -4,7 +4,7 @@ import TitleBar from "../TitleBar";
 const Blog = () => {
   return (
     <div className="bg-fixed bg-[url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')] bg-no-repeat bg-cover min-h-[100vh] bg-center">
-      <div className="backdrop-blur-sm bg-white/30 py-[70px]">
+      <div className="backdrop-blur-sm bg-white/60 py-[70px]">
         <div className="flex flex-col gap-5 text-[#000A38] p-10">
           <div>
             <h1 className="font-bold text-center text-3xl mb-1">My Blog</h1>

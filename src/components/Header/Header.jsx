@@ -21,7 +21,7 @@ const Header = () => {
         <Navbar.Start>
           <NavLink
             to={"/"}
-            className="flex justify-center items-center normal-case text-3xl font-bold"
+            className="text-[#000A38] flex justify-center items-center normal-case text-3xl font-bold"
           >
             <img src={logo} alt="" className="w-[60px]" />
             Quiz Dude
