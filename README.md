@@ -2,6 +2,8 @@
 
 A online quiz application. Anyone can give a test here to justify his/her knowledge on various topics. This project is built on learning purpose.
 
+I build this project with React. Used React Router to navigate on routes. Which is why it's an Single Page Application. For styling I used Tailwind CSS which is great because of it's customizing capability.
+
 ## Features
 
 - Mode: Suitable for both ligh/dark mode
