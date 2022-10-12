@@ -7,18 +7,17 @@ import RadioGroup from "@mui/joy/RadioGroup";
 import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { CorrectAnsCountContext } from "../../Context/CorrectAnsContext";
-import { ShowCorrectAnsContext } from "../../Context/ShowCorrectAnsContext";
 
 const Quiz = ({ question: { id, question, correctAnswer, options }, idx }) => {
   const [value, setValue] = useState("");
 
-  const [visible, setVisible] = useContext(ShowCorrectAnsContext);
+  const [visible, setVisible] = useState(false);
   let [correctAns, setCorrectAns] = useContext(CorrectAnsCountContext);
 
   const handleChange = (event, correctAnswer) => {
     if (correctAnswer === event.target.value) {
       toast.success("Correct Answer");
-      setCorrectAns(correctAns++);
+      setCorrectAns(correctAns + 1);
     } else {
       toast.error("Wrong Answer");
     }
