@@ -59,7 +59,7 @@ or
 
 ## Live Website
 
-Check [here](https://github.com/DabasishDasJoy) to see the live website.
+Check [here](quizy-dude-041de2.netlify.app) to see the live website.
 
 ## Author
 
