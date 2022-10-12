@@ -16,7 +16,7 @@ const Home = () => {
         <div className="text-white text-center flex flex-col items-center justify-center">
           <h1 className="text-[52px] font-extrabold leading-[62px] tracking-[2px]">
             Welcome to{" "}
-            <span className="font-extrabold text-[#FA4729]">Quiz Dude</span>
+            <span className="font-extrabold text-[#FA4729]">Quizy Dude</span>
           </h1>
           <p>Here you can test yourself with bunch of quizes.</p>
         </div>
