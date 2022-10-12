@@ -22,7 +22,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="relative bg-[url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')] bg-cover bg-no-repeat">
+      <div className="relative bg-[url('https://images.unsplash.com/photo-1588345921586-7408ea1b2c3c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')] bg-cover bg-no-repeat">
         <div className="relative mx-auto lg:w-[85%] md:w-[90%] w-full md:top-[-100px] top-0 md:rounded-lg bg-white p-10">
           <h1 className="text-3xl font-bold text-center">Topics</h1>
           <TitleBar></TitleBar>

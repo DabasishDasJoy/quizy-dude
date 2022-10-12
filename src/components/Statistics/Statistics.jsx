@@ -17,7 +17,7 @@ const Statistics = () => {
   const { data } = useContext(TopicsContext);
 
   return (
-    <div className="bg-fixed bg-[url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')] bg-no-repeat bg-cover min-h-[100vh] bg-center">
+    <div className="bg-fixed bg-[url('https://images.unsplash.com/photo-1518672703296-e3022657f7b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80')] bg-no-repeat bg-cover min-h-[100vh] bg-center">
       <div className="backdrop-blur-sm bg-white/30 py-[120px]">
         <div className="shadow-lg lg:w-[60%] md:w-[80%] w-full mx-auto border border-gray-400 bg-white rounded-lg p-5">
           <h1 className="text-3xl font-medium text-center text-[#000A38]">
