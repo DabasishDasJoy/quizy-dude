@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
+import { CorrectAnsCountContext } from "../../Context/CorrectAnsContext";
 import Quiz from "../Quiz/Quiz";
 import TitleBar from "../TitleBar";
 
 const Quizes = () => {
   const {
-    data: { logo, name, questions },
+    data: { logo, name, questions, total },
   } = useLoaderData();
+
+  let [correctAns, setCorrectAns] = useContext(CorrectAnsCountContext);
+
+  const hanldeBtnSubmit = () => {
+    toast.success(`You got ${correctAns} out ${total}`);
+    setCorrectAns(0);
+  };
 
   return (
     <div
@@ -28,6 +37,9 @@ const Quizes = () => {
         {questions.map((question, idx) => (
           <Quiz key={question.id} question={question} idx={idx + 1}></Quiz>
         ))}
+      </div>
+      <div>
+        <button onClick={hanldeBtnSubmit}>Submit</button>
       </div>
     </div>
   );

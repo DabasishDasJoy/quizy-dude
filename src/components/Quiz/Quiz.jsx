@@ -4,16 +4,19 @@ import { Radio } from "@mui/joy";
 import FormControl from "@mui/joy/FormControl";
 import FormLabel from "@mui/joy/FormLabel";
 import RadioGroup from "@mui/joy/RadioGroup";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import { CorrectAnsCountContext } from "../../Context/CorrectAnsContext";
 
 const Quiz = ({ question: { id, question, correctAnswer, options }, idx }) => {
   const [value, setValue] = useState("");
   const [visible, setVisible] = useState(false);
+  let [correctAns, setCorrectAns] = useContext(CorrectAnsCountContext);
 
   const handleChange = (event, correctAnswer) => {
     if (correctAnswer === event.target.value) {
       toast.success("Correct Answer");
+      setCorrectAns(correctAns + 1);
     } else {
       toast.error("Wrong Answer");
     }
