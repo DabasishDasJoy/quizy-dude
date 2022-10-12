@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
 import { CorrectAnsCountContext } from "../../Context/CorrectAnsContext";
+import { OpenResultModalContext } from "../../Context/OpenResultModal";
 import Quiz from "../Quiz/Quiz";
+import Result from "../Result/Result";
 import TitleBar from "../TitleBar";
 
 const Quizes = () => {
@@ -11,9 +12,10 @@ const Quizes = () => {
   } = useLoaderData();
 
   let [correctAns, setCorrectAns] = useContext(CorrectAnsCountContext);
+  const [open, setOpen] = useContext(OpenResultModalContext);
 
   const hanldeBtnSubmit = () => {
-    toast.success(`You got ${correctAns} out ${total}`);
+    setOpen(true);
     setCorrectAns(0);
   };
 
@@ -41,6 +43,7 @@ const Quizes = () => {
       <div>
         <button onClick={hanldeBtnSubmit}>Submit</button>
       </div>
+      <Result></Result>
     </div>
   );
 };
